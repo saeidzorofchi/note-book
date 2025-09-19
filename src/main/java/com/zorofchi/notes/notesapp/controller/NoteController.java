@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping({"/note"})
+@RequestMapping("/note")
 public class NoteController {
 
     @Autowired
@@ -31,9 +31,9 @@ public class NoteController {
         noteRepository.deleteById(id);
     }
 
-    @PutMapping("/{id}")
-    public Note updateNote(@PathVariable long id, @RequestBody Note noteRequest) {
-        return noteService.update(id, noteRequest);
+    @PutMapping()
+    public Note updateNote(@RequestBody Note noteRequest) {
+        return noteService.update(noteRequest);
     }
 
 

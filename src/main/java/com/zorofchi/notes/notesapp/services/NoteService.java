@@ -14,7 +14,7 @@ public class NoteService {
     @Autowired
     private NoteRepository noteRepository;
 
-    public Note update(long id, Note noteRequest) {
+    public Note update( Note noteRequest) {
 
         Note noteData = noteRequest;
 
