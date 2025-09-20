@@ -10,6 +10,11 @@ spring:
       ddl-auto: update
 
   security:
+
     user:
       name: user
       password: 1234
+
+    jwt:
+      secret: saeed###%&*f
+      expiration-ms: 100000
